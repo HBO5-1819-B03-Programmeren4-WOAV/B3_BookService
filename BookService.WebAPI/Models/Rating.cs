@@ -1,4 +1,6 @@
-﻿namespace BookService.WebAPI.Models
+﻿using Newtonsoft.Json;
+
+namespace BookService.WebAPI.Models
 {
     public class Rating : EntityBase
     {

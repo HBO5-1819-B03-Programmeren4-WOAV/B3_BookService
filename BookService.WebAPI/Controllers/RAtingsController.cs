@@ -18,11 +18,7 @@ namespace BookService.WebAPI.Controllers
         [HttpGet]
         public override async Task<IActionResult> Get()
         {
-            var result = new JsonSerializerSettings
-            {
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-            };
-            return Ok(JsonConvert.SerializeObject(await repository.GetAllInclusive(), result));
+            return Ok(JsonConvert.SerializeObject(await repository.GetAllInclusive()));
         }
     }
 }
